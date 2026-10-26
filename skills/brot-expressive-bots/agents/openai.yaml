@@ -1,0 +1,5 @@
+interface:
+  display_name: "Brot Expressive Bots"
+  short_description: "Extend Brot animated SVG character families"
+  brand_color: "#55E9FF"
+  default_prompt: "Use $brot-expressive-bots to create a new animated Brot expression that matches the existing README gallery."

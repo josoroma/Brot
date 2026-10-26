@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Expressive 3D orb — Shy</title><desc id="desc">A softly lit spherical bot moves from neutral to peak shy while the camera pans and zooms, then returns to neutral.</desc>
+  <defs>
+    <radialGradient id="orb" cx="31%" cy="24%" r="78%"><stop offset="0" stop-color="#FFFDF7"/><stop offset=".3" stop-color="#F1EEE7"/><stop offset=".68" stop-color="#C9C5BE"/><stop offset="1" stop-color="#77746F"/></radialGradient>
+    <radialGradient id="soft-light" cx="28%" cy="15%" r="70%"><stop stop-color="#FFF" stop-opacity=".72"/><stop offset=".48" stop-color="#FFF" stop-opacity=".06"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+    <linearGradient id="eye" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#202329"/><stop offset="1" stop-color="#050609"/></linearGradient>
+    <filter id="orb-shadow" x="-45%" y="-45%" width="190%" height="205%"><feDropShadow dx="0" dy="13" stdDeviation="12" flood-color="#000" flood-opacity=".48"/><feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#FF92C9" flood-opacity=".2"/></filter>
+    <filter id="eye-depth" x="-70%" y="-70%" width="240%" height="240%"><feDropShadow dx="1" dy="2" stdDeviation="1.8" flood-color="#000" flood-opacity=".55"/></filter>
+  </defs>
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="0 0;0 0;7 -1;7 -1;0 0" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"/>
+    <g transform="translate(128 128)"><g><animateTransform attributeName="transform" type="scale" values="1;1;1.1;1.1;1" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines=".4 0 .2 1;.4 0 .2 1;.4 0 .2 1;.4 0 .2 1"/>
+      <g transform="translate(-128 -128)">
+        <g filter="url(#orb-shadow)"><animateTransform attributeName="transform" type="rotate" values="0 128 128;0 128 128;7 128 128;7 128 128;0 128 128" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/>
+          <circle cx="128" cy="126" r="82" fill="url(#orb)"/>
+          <circle cx="128" cy="126" r="82" fill="url(#soft-light)"/>
+          <path d="M77 73C99 51 137 43 166 56" fill="none" stroke="#FFF" stroke-width="6" stroke-linecap="round" opacity=".28"/>
+          <g fill="url(#eye)" filter="url(#eye-depth)">
+            <ellipse cx="99" cy="108" rx="12" ry="20"><animate attributeName="cx" values="99;99;98;98;99" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/><animate attributeName="cy" values="108;108;113;113;108" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/><animate attributeName="rx" values="12;12;11;11;12" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/><animate attributeName="ry" values="20;20;15;15;20" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/></ellipse>
+            <ellipse cx="157" cy="108" rx="12" ry="20"><animate attributeName="cx" values="157;157;148;148;157" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/><animate attributeName="cy" values="108;108;108;108;108" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/><animate attributeName="rx" values="12;12;11;11;12" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/><animate attributeName="ry" values="20;20;15;15;20" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/></ellipse>
+          </g>
+          <path d="M116 157C123 161 133 161 140 157" fill="none" stroke="#25272C" stroke-width="5" stroke-linecap="round" opacity=".88"><animate attributeName="d" values="M116 157C123 161 133 161 140 157;M116 157C123 161 133 161 140 157;M117 160C124 157 132 157 139 160;M117 160C124 157 132 157 139 160;M116 157C123 161 133 161 140 157" keyTimes="0;.18;.58;.76;1" dur="5s" repeatCount="indefinite"/></path>
+        </g>
+      </g>
+    </g></g>
+  </g>
+</svg>

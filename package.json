@@ -1,0 +1,13 @@
+{
+  "name": "brot-animated-bots",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Brot animated SVG character families and wordmark",
+  "type": "module",
+  "scripts": {
+    "build": "node expressions/generate.mjs",
+    "check": "python3 scripts/validate.py",
+    "pack": "python3 scripts/package.py",
+    "preview": "python3 -m http.server 8080"
+  }
+}
